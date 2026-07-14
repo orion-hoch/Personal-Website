@@ -157,7 +157,7 @@ function PlaceholderBox({ building, isHovered }: { building: BuildingDef; isHove
   });
 
   const details: ReactNode[] = [];
-  const showDefaultWindows = !['signpost', 'lighthouse', 'ferriswheel', 'radiotower'].includes(building.type);
+  const showDefaultWindows = !['lighthouse', 'ferriswheel', 'radiotower'].includes(building.type);
 
   if (building.type === 'lighthouse') {
     return (
@@ -255,28 +255,6 @@ function PlaceholderBox({ building, isHovered }: { building: BuildingDef; isHove
     );
   }
 
-  if (building.type === 'radio_tower') {
-    details.push(
-      <mesh key="antenna" position={[0, h / 2 + 2, 0]}>
-        <cylinderGeometry args={[0.08, 0.15, 4, 6]} />
-        <meshLambertMaterial color="#4A4A50" />
-      </mesh>,
-      <mesh key="light" position={[0, h / 2 + 4.1, 0]}>
-        <sphereGeometry args={[0.15, 8, 8]} />
-        <meshLambertMaterial color="#D04040" emissive="#D04040" emissiveIntensity={2} />
-      </mesh>
-    );
-  }
-
-  if (building.type === 'trading_post') {
-    details.push(
-      <mesh key="sign" position={[0, h / 2 + 0.5, d / 2 + 0.1]}>
-        <boxGeometry args={[2, 0.5, 0.1]} />
-        <meshLambertMaterial color="#40D080" emissive="#40D080" emissiveIntensity={1.5} />
-      </mesh>
-    );
-  }
-
   if (building.type === 'bunker') {
     details.push(
       <mesh key="door-glow" position={[0, 0.3, d / 2 + 0.05]}>
@@ -284,34 +262,6 @@ function PlaceholderBox({ building, isHovered }: { building: BuildingDef; isHove
         <meshLambertMaterial color="#D4A040" emissive="#D4A040" emissiveIntensity={0.8} />
       </mesh>
     );
-  }
-
-  if (building.type === 'town_hall') {
-    [-1.5, -0.5, 0.5, 1.5].forEach((cx, i) => {
-      details.push(
-        <mesh key={`col-${i}`} position={[cx, 0, d / 2 + 0.3]}>
-          <cylinderGeometry args={[0.12, 0.12, h, 8]} />
-          <meshLambertMaterial color="#9A9590" />
-        </mesh>
-      );
-    });
-  }
-
-  if (building.type === 'signpost') {
-    details.push(
-      <mesh key="post" position={[0, h / 2 + 1, 0]}>
-        <cylinderGeometry args={[0.08, 0.08, h + 2, 6]} />
-        <meshLambertMaterial color="#4A3A20" />
-      </mesh>
-    );
-    [-0.8, 0, 0.8].forEach((sy, i) => {
-      details.push(
-        <mesh key={`sign-${i}`} position={[i % 2 === 0 ? 0.6 : -0.6, h / 2 + 1.5 + sy, 0]} rotation={[0, i * 0.3, 0]}>
-          <boxGeometry args={[1.2, 0.3, 0.05]} />
-          <meshLambertMaterial color={i % 2 === 0 ? '#6A5A40' : '#4A3A20'} />
-        </mesh>
-      );
-    });
   }
 
   return (

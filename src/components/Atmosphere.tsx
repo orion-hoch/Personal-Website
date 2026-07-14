@@ -10,9 +10,6 @@ import * as THREE from 'three';
 import { lightSources } from '../data/mapData';
 import { gridTo3D, GROUND_SIZE } from '../engine/gridUtils';
 
-// Keep all lights with real contribution — threshold lowered for richer scene
-const ACTIVE_LIGHT_SOURCES = lightSources.filter((source) => source.intensity >= 0.45);
-
 function pseudoRandom(seed: number) {
   const n = Math.sin(seed * 127.1) * 43758.5453;
   return n - Math.floor(n);
@@ -122,7 +119,7 @@ function AshParticles() {
 }
 
 export default function Atmosphere() {
-  const sparklesSources = useMemo(() => ACTIVE_LIGHT_SOURCES.slice(0, 3), []);
+  const sparklesSources = useMemo(() => lightSources.slice(0, 3), []);
 
   return (
     <>
@@ -160,7 +157,7 @@ export default function Atmosphere() {
       <LighthouseBeacon />
 
       {/* Point lights from lightSources data */}
-      {ACTIVE_LIGHT_SOURCES.map((ls, i) => (
+      {lightSources.map((ls, i) => (
         <FlickerLight key={i} col={ls.col} row={ls.row} color={ls.color} intensity={ls.intensity} />
       ))}
 

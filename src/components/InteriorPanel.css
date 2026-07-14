@@ -95,7 +95,7 @@
 }
 
 .neo-header__title {
-  font-family: 'Cinzel', serif;
+  font-family: 'Roman Antique', serif;
   font-size: 38px;
   font-weight: 900;
   letter-spacing: 5px;
@@ -416,7 +416,7 @@
 
 .neo-entry__title {
   color: var(--neo-text);
-  font-family: Georgia, 'Cinzel', serif;
+  font-family: Georgia, 'Roman Antique', serif;
   font-size: 17px;
   margin-bottom: 4px;
 }

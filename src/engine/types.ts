@@ -1,6 +1,6 @@
 // Shared types for the 3D wasteland scene
 
-export type BuildingType = 'bunker' | 'workshop' | 'radio_tower' | 'trading_post' | 'town_hall' | 'signpost' | 'lighthouse' | 'ferriswheel' | 'radiotower' | 'power_plant' | 'camp';
+export type BuildingType = 'bunker' | 'lighthouse' | 'ferriswheel' | 'radiotower' | 'power_plant' | 'camp';
 
 export interface BuildingDef {
   id: string;

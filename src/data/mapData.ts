@@ -126,27 +126,18 @@ export const buildings: BuildingDef[] = [
 ];
 
 // Light source positions — lighthouse is the primary source, town is brighter overall
-export const lightSources: Array<{ col: number; row: number; radius: number; color: string; intensity: number }> = [
+export const lightSources: Array<{ col: number; row: number; color: string; intensity: number }> = [
   // ─── LIGHTHOUSE — primary beacon ───
-  { col: 12.5, row: 12.5, radius: 12, color: '#F0D890', intensity: 1.3 },
-  { col: 12.5, row: 12.5, radius: 6, color: '#D4A040', intensity: 0.72 },
+  { col: 12.5, row: 12.5, color: '#F0D890', intensity: 1.3 },
+  { col: 12.5, row: 12.5, color: '#D4A040', intensity: 0.72 },
 
   // ─── Building lights (matched to new positions) ───
-  { col: 6.41, row: 10.52, radius: 4, color: '#D4A040', intensity: 0.5 },   // camp (about)
-  { col: 12.5, row: 6.1, radius: 4.4, color: '#40D080', intensity: 0.62 },   // power plant
-  { col: 18.59, row: 10.52, radius: 3.5, color: '#D04040', intensity: 0.45 }, // radio tower
-  { col: 8.74, row: 17.68, radius: 4.5, color: '#D4A040', intensity: 0.5 },  // bunker
-  { col: 9.65, row: 16.45, radius: 3.4, color: '#E0BE74', intensity: 0.62 }, // bunker front light
-  { col: 16.26, row: 17.68, radius: 4.6, color: '#D08030', intensity: 0.55 }, // ferris wheel
-
-  // ─── Street lamps ───
-  { col: 8, row: 8, radius: 3, color: '#D4A040', intensity: 0.35 },
-  { col: 15, row: 12, radius: 3, color: '#D4A040', intensity: 0.35 },
-  { col: 8, row: 16, radius: 3, color: '#D4A040', intensity: 0.3 },
-  { col: 4, row: 12, radius: 2.5, color: '#D08030', intensity: 0.35 },
-  { col: 20, row: 12, radius: 2.5, color: '#D08030', intensity: 0.3 },
-  { col: 12, row: 6, radius: 2.5, color: '#D4A040', intensity: 0.3 },
-  { col: 12, row: 18, radius: 2.5, color: '#D4A040', intensity: 0.3 },
+  { col: 6.41, row: 10.52, color: '#D4A040', intensity: 0.5 },   // camp (about)
+  { col: 12.5, row: 6.1, color: '#40D080', intensity: 0.62 },    // power plant
+  { col: 18.59, row: 10.52, color: '#D04040', intensity: 0.45 }, // radio tower
+  { col: 8.74, row: 17.68, color: '#D4A040', intensity: 0.5 },   // bunker
+  { col: 9.65, row: 16.45, color: '#E0BE74', intensity: 0.62 },  // bunker front light
+  { col: 16.26, row: 17.68, color: '#D08030', intensity: 0.55 }, // ferris wheel
 ];
 
 /** Generate tile map procedurally */
