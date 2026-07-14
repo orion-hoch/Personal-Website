@@ -120,6 +120,17 @@ export const interiorContent: Record<string, InteriorContent> = {
         headerImage: '/images/project/projects_header.webp',
         items: [
           {
+            title: 'Semantic Segmentation Training Terminal GUI',
+            visualizationStepId: 'project-semantic',
+            imageLabel: 'Semantic Segmentation Image',
+            image: '/images/project/semantic.webp',
+            href: 'https://github.com/gcsgeospatial/SemanticSegmentationGUI',
+            hrefLabel: 'View GitHub Repo',
+            external: true,
+            description: 'Created a terminal-based GUI for training semantic segmentation models on LiDAR point clouds. The GUI allows users to select datasets, configure model parameters, and visualize training progress in real-time. It supports multiple architectures and provides detailed logging for performance analysis.',
+            skills: ['Semantic Segmentation', 'CNNs', 'PyTorch', 'LiDAR', 'Pointcept'],
+          },
+          {
             title: 'LiDAR Gap Analysis of Post-Hurricane Canopy Disturbance',
             visualizationStepId: 'project-lidar',
             imageLabel: 'Research Image',
@@ -129,14 +140,6 @@ export const interiorContent: Record<string, InteriorContent> = {
             external: true,
             description: 'A CloudComPy/Python pipeline that processes repeat airborne NASA G-LiHT LiDAR surveys of Puerto Rico\'s Luquillo Experimental Forest (pre/post Hurricane Maria) to quantify hurricane-driven canopy gap formation. Computes cloud-to-cloud nearest-neighbor distances across two full point clouds, then applies raster-based gap delineation with 8-connectivity labeling to extract accurate gap boundaries. Gap area distributions are fit to a power-law using both MLE and OLS regression for statistical validation.',
             skills: ['CloudComPy', 'LiDAR', 'NumPy', 'SciPy', 'Python', 'GIS'],
-          },
-          {
-            title: 'NBA Computer Vision Shot Quality Quantifier',
-            visualizationStepId: 'project-shot-quality-overview',
-            imageLabel: 'Project Image',
-            image: '/images/project/shot.webp',
-            description: 'A short summary of what the project is, why it exists, and what makes it worth showing.',
-            skills: ['Computer Vision', 'Analytics', 'Design'],
           },
           {
             title: 'Lichen as an Atmospheric Emission Proxy — Stable Isotope Reconstruction',
@@ -160,14 +163,6 @@ export const interiorContent: Record<string, InteriorContent> = {
             external: true,
             description: 'A sub-$20 open-source wearable input device built as a one-day hackathon project. Two HW-040 rotary encoders track individual finger positions and double as haptic feedback actuators; an Adafruit 9DOF IMU (accelerometer, magnetometer, gyroscope) handles full hand orientation and gesture detection. An ESP32 runs a custom USB serial protocol to pipe finger and pose data to a host — the protocol is MCU-agnostic by design. Enclosure is 3D-printed and mechanically integrates all sensor hardware.',
             skills: ['ESP32', 'Arduino/C++', 'Sensor Fusion', 'IMU', 'Hardware Design', 'Fusion 360'],
-          },
-          {
-            title: 'Buoy Weather Station',
-            visualizationStepId: 'project-buoy-overview',
-            imageLabel: 'Project Image',
-            image: '/images/project/buoy.webp',
-            description: 'A field hardware and environmental sensing build centered on monitoring under real deployment constraints.',
-            skills: ['Hardware', 'Weather', 'Monitoring'],
           },
           {
             title: 'Historical Oregon Flood Analysis — ArcGIS StoryMap',

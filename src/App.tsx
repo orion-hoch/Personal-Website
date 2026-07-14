@@ -105,7 +105,7 @@ function App() {
         width: 'max-content',
         maxWidth: 'calc(100vw - 24px)',
         textAlign: 'center',
-        fontFamily: "'Spectral', serif",
+        fontFamily: "'Times New Roman', Times, serif",
         fontSize: IS_TOUCH ? 13 : 16,
         color: 'rgba(236, 231, 223, 0.82)',
         letterSpacing: 2,
