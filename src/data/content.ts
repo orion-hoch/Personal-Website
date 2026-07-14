@@ -82,17 +82,17 @@ export const interiorContent: Record<string, InteriorContent> = {
         primaryPhotoButtonLabel: 'Click for Serious',
         alternatePhotoButtonLabel: 'Click for Casual',
         bio: [
-          'I build interfaces, systems, and prototypes with a bias toward clarity, atmosphere, and strong structure. I like work that feels intentional instead of over-decorated, and I care a lot about how people move through information.',
-          'Most of my projects live at the intersection of design and engineering. That usually means taking something abstract, shaping it into a coherent system, and then carrying it through implementation without flattening the original point of view.',
+          'I am a Cornell student studying CS with a passion for environmental programming, focused on large-scale LiDAR analysis. That means building pipelines and tools for aerial point clouds for semantic segmentation models, canopy disturbance analysis, and geospatial workflows in general.',
+          'Outside of the environmental work, I obsess over sports data/history, hiking the PNW, and playing games that look like the landing hub of this site.',
         ],
         skillGroups: [
           {
             title: 'Languages and Libraries',
-            items: ['Python', 'R', 'Java', 'C++', 'OCaml', 'JavaScript', 'ArcPy', 'RSGISLib', 'cartopy', 'CloudComPy'],
+            items: ['Python', 'JavaScript', 'Java', 'C++', 'R', 'OCaml', 'PyTorch', 'NumPy', 'SciPy', 'Open3D', 'laspy', 'Polars', 'Three.js', 'ArcPy', 'CloudComPy', 'cartopy'],
           },
           {
             title: 'Operational Skills',
-            items: ['ArcGIS', 'QGIS', 'CloudCompare', 'Google Earth Engine', 'Mass Spectrometry', 'Gas Chromatography', 'CESM 2.2', 'Fusion360', 'Blender'],
+            items: ['ArcGIS', 'QGIS', 'CloudCompare', 'Google Earth Engine', 'Docker', 'Modal (cloud GPU training)', 'SQLite', 'Mass Spectrometry', 'Gas Chromatography', 'CESM 2.2', 'Fusion360', 'Blender'],
           },
           {
             title: 'Courses',
@@ -324,16 +324,16 @@ export const interiorContent: Record<string, InteriorContent> = {
         headerImageLabel: 'Creative Work Header Image',
         headerImage: '/images/creative/trivia_header.png',
         items: [
-                    {
+          {
             title: 'BoxScorigami',
-            visualizationStepId: 'creative-sportsvis-overview',
             imageLabel: 'Project Image',
-            href: 'https://boxscorigami.fun/#sport=nba',
-            hrefLabel: 'Visit DataVis Site',
+            href: 'https://box-scorigami.vercel.app',
+            hrefLabel: 'Visit BoxScorigami',
             external: true,
             image: '/images/creative/boxscorigami.svg',
-            description: 'A full-stack sports trivia arcade covering NFL and NBA history with 5+ distinct game modes, each designed as a unique experience rather than a reskin. Backend built in Flask and FastAPI handles all game logic and rule validation server-side; the SvelteKit frontend owns feel, animation, and UI. Game state is structured around a shared SQLite database of player stats, draft history, awards, and team relationships, with each mode exposing a different slice of that data as its core mechanic.',
-            skills: ['Python', 'Flask', 'FastAPI', 'SvelteKit', 'SQLite', 'UI Design', 'Game Design'],
+            imageFit: 'contain',
+            description: 'A Jon Bois-inspired "scorigami" explorer: an interactive 3D voxel grid of every player-game stat line in NBA, NFL, and MLB history. Pick any three stats for the X/Y/Z axes, rotate and peel back layers, and click a voxel to see the most recent game that produced that exact line, plus a leaderboard of who owns the most unique combos. Python pipelines (nba_api, nflverse, Pro-Football-Reference, MLB-StatsAPI) scrape each sport into SQLite, then precompute every axis combination into static JSON — so the deployed Three.js viewer runs with no backend at all.',
+            skills: ['Three.js', 'Python', 'SQLite', 'Data Pipelines', 'Data Visualization'],
           },
           {
             title: 'Trivia Website',
@@ -346,17 +346,7 @@ export const interiorContent: Record<string, InteriorContent> = {
             description: 'A full-stack sports trivia arcade covering NFL and NBA history with 5+ distinct game modes, each designed as a unique experience rather than a reskin. Backend built in Flask and FastAPI handles all game logic and rule validation server-side; the SvelteKit frontend owns feel, animation, and UI. Game state is structured around a shared SQLite database of player stats, draft history, awards, and team relationships, with each mode exposing a different slice of that data as its core mechanic.',
             skills: ['Python', 'Flask', 'FastAPI', 'SvelteKit', 'SQLite', 'UI Design', 'Game Design'],
           },
-          {
-            title: 'BoxScorigami',
-            imageLabel: 'Project Image',
-            href: 'https://box-scorigami.vercel.app',
-            hrefLabel: 'Visit BoxScorigami',
-            external: true,
-            image: '/images/creative/boxscorigami.svg',
-            imageFit: 'contain',
-            description: 'A Jon Bois-inspired "scorigami" explorer: an interactive 3D voxel grid of every player-game stat line in NBA, NFL, and MLB history. Pick any three stats for the X/Y/Z axes, rotate and peel back layers, and click a voxel to see the most recent game that produced that exact line, plus a leaderboard of who owns the most unique combos. Python pipelines (nba_api, nflverse, Pro-Football-Reference, MLB-StatsAPI) scrape each sport into SQLite, then precompute every axis combination into static JSON — so the deployed Three.js viewer runs with no backend at all.',
-            skills: ['Three.js', 'Python', 'SQLite', 'Data Pipelines', 'Data Visualization'],
-          },
+
           {
             title: '3D Personal Website',
             visualizationStepId: 'creative-website-overview',
