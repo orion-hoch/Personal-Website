@@ -1,6 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import WastelandScene from './components/WastelandScene';
-import NeonHeader from './components/NeonHeader';
 import LoadingScreen from './components/LoadingScreen';
 import WalkthroughLoadingScreen from './components/WalkthroughLoadingScreen';
 import type { BuildingDef } from './engine/types';
@@ -18,8 +17,14 @@ function App() {
   const [focusedBuilding, setFocusedBuilding] = useState<BuildingDef | null>(null);
   const [activeVisualization, setActiveVisualization] = useState<ActiveVisualization | null>(null);
   const [walkthroughLoading, setWalkthroughLoading] = useState(false);
+  const [hintVisible, setHintVisible] = useState(true);
   const launchTimerRef = useRef<number | null>(null);
   const settleTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setHintVisible(false), 15000);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const handleBuildingClick = useCallback((b: BuildingDef) => {
     if (b.decorative) return;
@@ -58,7 +63,6 @@ function App() {
         onBuildingClick={handleBuildingClick}
         onUnfocus={handleUnfocus}
       />
-      <NeonHeader />
       <Suspense fallback={null}>
         {focusedBuilding && (
           <InteriorPanel
@@ -97,6 +101,8 @@ function App() {
         background: 'rgba(0, 0, 0, 0.45)',
         border: '1px solid rgba(86, 101, 93, 0.28)',
         textShadow: '0 1px 2px rgba(0, 0, 0, 0.75)',
+        opacity: hintVisible ? 1 : 0,
+        transition: 'opacity 1.2s ease',
       }}>
         DRAG TO ROTATE • SCROLL TO ZOOM • CLICK LOCATIONS TO EXPLORE
       </div>

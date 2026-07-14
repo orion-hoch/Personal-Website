@@ -40,6 +40,7 @@ function toLambertMaterial(mat: THREE.Material): THREE.Material {
   return new THREE.MeshLambertMaterial({
     color: std.color,
     map: std.map,
+    flatShading: true,
     emissive: std.emissive,
     emissiveIntensity: std.emissiveIntensity,
     emissiveMap: std.emissiveMap,

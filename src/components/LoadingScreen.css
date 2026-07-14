@@ -24,16 +24,6 @@
   text-align: center;
 }
 
-.loading-screen__sign {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
-  filter: drop-shadow(0 0 24px rgba(180, 160, 120, 0.12));
-  animation: sign-glow 2.8s ease-in-out infinite alternate;
-}
-
 .loading-screen__subtitle {
   color: #7a7570;
   font-family: 'Spectral', serif;
@@ -209,21 +199,12 @@
   animation: loading-pulse 1.4s ease-in-out infinite;
 }
 
-@keyframes sign-glow {
-  0% { filter: drop-shadow(0 0 16px rgba(180, 160, 120, 0.08)); }
-  100% { filter: drop-shadow(0 0 36px rgba(180, 160, 120, 0.22)); }
-}
-
 @keyframes loading-pulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
 
 @media (max-width: 640px) {
-  .loading-screen__sign {
-    max-width: 260px;
-  }
-
   .loading-bar {
     width: 200px;
   }

@@ -57,12 +57,6 @@ export default function LoadingScreen() {
   return (
     <div className={`loading-screen ${ending ? 'ending' : ''}`} aria-hidden>
       <div className="loading-screen__content">
-        <img
-          className="loading-screen__sign"
-          src="/images/loading-sign.png"
-          alt=""
-          draggable={false}
-        />
         <div className="loading-screen__subtitle">
           An interactive 3D portfolio built in the ruins
         </div>

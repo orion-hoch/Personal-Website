@@ -200,7 +200,6 @@ export const interiorContent: Record<string, InteriorContent> = {
           { label: 'Email', value: 'ogh6@cornell.edu', href: 'mailto:ogh6@cornell.edu' },
           { label: 'GitHub', value: 'github.com/orion-hoch', href: 'https://github.com/orion-hoch' },
           { label: 'LinkedIn', value: 'linkedin.com/in/orion-hoch/', href: 'https://www.linkedin.com/in/orion-hoch/' },
-          { label: 'Trivia Site', value: 'oriontrivia.org', href: 'https://oriontrivia.org'},
           { label: 'Location', value: 'Ithaca, NY / Portland, OR' },
         ],
       },
