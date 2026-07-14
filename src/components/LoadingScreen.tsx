@@ -68,7 +68,7 @@ export default function LoadingScreen() {
     <div className={`loading-screen ${ending ? 'ending' : ''}`} aria-hidden>
       <div className="loading-screen__content">
         <div className="loading-screen__subtitle">
-          An interactive 3D portfolio built in the ruins
+          An Interactive 3D Portfolio
         </div>
 
         {/* 90s-style chunky loading bar */}

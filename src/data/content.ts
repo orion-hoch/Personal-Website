@@ -1,4 +1,4 @@
-import resumePdf from '../../Orion_Hoch_Resume_Climate_Copy.pdf';
+const resumePdf = '/documents/Orion_Hoch_Resume_Climate_Copy.pdf';
 import type { VisualizationSequenceId } from './visualizationSequences';
 
 export interface PortfolioItem {
@@ -117,7 +117,7 @@ export const interiorContent: Record<string, InteriorContent> = {
         // visualizationSequenceId: 'projects',
         // visualizationLabel: 'Personal Walkthrough',
         headerImageLabel: 'Projects Header Image',
-        headerImage: '/images/ui/panel-texture.png',
+        headerImage: '/images/project/projects_header.webp',
         items: [
           {
             title: 'LiDAR Gap Analysis of Post-Hurricane Canopy Disturbance',
@@ -143,7 +143,7 @@ export const interiorContent: Record<string, InteriorContent> = {
             visualizationStepId: 'project-lichen',
             imageLabel: 'Research Image',
             image: '/images/project/lichen.webp',
-            href: '/Lichen_Presentation.pdf',
+            href: '/documents/Lichen_Presentation.pdf',
             hrefLabel: 'View Research Slides',
             external: true,
             description: 'Used museum lichen collections (NY Botanical Garden, NY State Museum) spanning 1860–2020 as a historical record of atmospheric pollution. Crushed and encapsulated samples were analyzed on an Isotope Ratio Mass Spectrometer to track δ15N, δ34S, and δ13C over time. Nitrogen isotopes show a clear shift from heavy coal combustion signatures (+15‰) to lighter fossil fuel and NH3 sources (-9.5‰) over the 20th century. Sulfur isotopes show an upward trend post-1970 directly tied to Clean Air Act scrubber and catalytic converter mandates. Carbon isotopes required a Seuss correction to separate fossil fuel dilution from a physiological lichen response to rising CO2. Monte Carlo mixing models were used to estimate source contribution ranges and spatial emission distributions.',
@@ -174,7 +174,7 @@ export const interiorContent: Record<string, InteriorContent> = {
             visualizationStepId: 'project-flood-overview',
             imageLabel: 'Project Image',
             image: '/images/project/flood.webp',
-            href: '/ArcGIS StoryMaps.pdf',
+            href: '/documents/ArcGIS StoryMaps.pdf',
             hrefLabel: 'View StoryMap PDF',
             external: true,
             description: 'An ArcGIS StoryMap produced during an internship at NWS Portland documenting major flood events across Northwest Oregon and Southwest Washington from 1964–2015. Each event (including the 1996 billion-dollar flood, the 2006 Oregon 24-hour precipitation record, and the 2012 record Marys River crest) is mapped with severity based on max crest height, dollar damage by region, and aerial/archival photography. Built with QGIS, ArcGIS, and ArcPy from NWS crest stage records, SNOTEL precipitation data, and county damage logs.',
