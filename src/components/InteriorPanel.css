@@ -26,6 +26,7 @@
   width: 1070px;
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100dvh;
   background:
     radial-gradient(circle at 18% 16%, rgba(28, 30, 142, 0.12), transparent 24%),
     radial-gradient(circle at 82% 74%, rgba(53, 40, 107, 0.24), transparent 28%),
@@ -618,5 +619,47 @@
   .neo-close {
     position: static;
     margin-top: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .neo-header {
+    padding: 16px 12px 12px;
+  }
+
+  .neo-header__title {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  /* Keep the exit reachable while scrolled deep into a panel */
+  .neo-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    margin-top: 0;
+  }
+
+  .neo-main {
+    padding: 14px 12px 18px;
+  }
+
+  /* Justified text creates rivers of whitespace in narrow columns */
+  .neo-copy,
+  .neo-copy--compact {
+    text-align: left;
+  }
+
+  /* Comfortable tap targets */
+  .neo-nav__item {
+    padding: 8px 4px;
+  }
+
+  .neo-linklist__item,
+  .neo-text-link,
+  .neo-action-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }

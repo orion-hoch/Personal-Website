@@ -29,13 +29,12 @@ function LighthouseBeacon() {
         position={[x, 6.8, z]}
         color="#F0E2AE"
         intensity={12}
-        distance={20}
         decay={2}
       />
       {/* Cross-fill lights for even spread around the lighthouse */}
-      <pointLight position={[x + fillOffset, 4.2, z]} color="#DCCB9A" intensity={4} distance={11} decay={2} />
-      <pointLight position={[x - fillOffset, 4.2, z]} color="#DCCB9A" intensity={4} distance={11} decay={2} />
-      <pointLight position={[x, 4.2, z + fillOffset]} color="#DCCB9A" intensity={4} distance={11} decay={2} />
+      <pointLight position={[x + fillOffset, 4.2, z]} color="#DCCB9A" intensity={4} decay={2} />
+      <pointLight position={[x - fillOffset, 4.2, z]} color="#DCCB9A" intensity={4} decay={2} />
+      <pointLight position={[x, 4.2, z + fillOffset]} color="#DCCB9A" intensity={4} decay={2} />
     </group>
   );
 }
@@ -63,7 +62,6 @@ function FlickerLight({ col, row, color, intensity }: { col: number; row: number
       position={[x, isLarge ? 6 : 1.5, z]}
       color={color}
       intensity={baseIntensity}
-      distance={isLarge ? 32 : 12}
       decay={2}
     />
   );

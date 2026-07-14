@@ -8,6 +8,8 @@ import type { VisualizationSequenceId } from './data/visualizationSequences';
 const InteriorPanel = lazy(() => import('./components/InteriorPanel'));
 const VisualizationSequence = lazy(() => import('./components/visualization/VisualizationSequence'));
 
+const IS_TOUCH = window.matchMedia('(pointer: coarse)').matches;
+
 interface ActiveVisualization {
   sequenceId: VisualizationSequenceId;
   stepId?: string;
@@ -97,11 +99,14 @@ function App() {
       {/* Help hint */}
       <div style={{
         position: 'fixed',
-        bottom: 16,
+        bottom: 'calc(16px + env(safe-area-inset-bottom))',
         left: '50%',
         transform: 'translateX(-50%)',
+        width: 'max-content',
+        maxWidth: 'calc(100vw - 24px)',
+        textAlign: 'center',
         fontFamily: "'Spectral', serif",
-        fontSize: 16,
+        fontSize: IS_TOUCH ? 13 : 16,
         color: 'rgba(236, 231, 223, 0.82)',
         letterSpacing: 2,
         pointerEvents: 'none',
@@ -114,7 +119,9 @@ function App() {
         opacity: hintVisible ? 1 : 0,
         transition: 'opacity 1.2s ease',
       }}>
-        DRAG TO ROTATE • SCROLL TO ZOOM • CLICK LOCATIONS TO EXPLORE
+        {IS_TOUCH
+          ? 'DRAG TO ROTATE • PINCH TO ZOOM • TAP LOCATIONS TO EXPLORE'
+          : 'DRAG TO ROTATE • SCROLL TO ZOOM • CLICK LOCATIONS TO EXPLORE'}
       </div>
     </>
   );

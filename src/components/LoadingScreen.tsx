@@ -4,13 +4,23 @@ import './LoadingScreen.css';
 const DISPLAY_MS = 1600;
 const FADE_MS = 400;
 
-const TIPS = [
-  'Drag to rotate the camera around the wasteland',
-  'Scroll to zoom in and out',
-  'Click on any building to explore that section',
-  'Press ESC to close any open panel',
-  'Each building represents a different part of my portfolio',
-];
+const IS_TOUCH = window.matchMedia('(pointer: coarse)').matches;
+
+const TIPS = IS_TOUCH
+  ? [
+      'Drag to rotate the camera around the wasteland',
+      'Pinch to zoom in and out',
+      'Tap on any building to explore that section',
+      'Tap "return to hub" to close any open panel',
+      'Each building represents a different part of my portfolio',
+    ]
+  : [
+      'Drag to rotate the camera around the wasteland',
+      'Scroll to zoom in and out',
+      'Click on any building to explore that section',
+      'Press ESC to close any open panel',
+      'Each building represents a different part of my portfolio',
+    ];
 
 function seededRand(seed: number) {
   let s = seed;
