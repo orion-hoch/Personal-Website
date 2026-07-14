@@ -113,8 +113,9 @@ export const interiorContent: Record<string, InteriorContent> = {
         label: 'Projects',
         layout: 'list',
         intro: 'Technical projects, research, and field work collected in one archive.',
-        visualizationSequenceId: 'projects',
-        visualizationLabel: 'Personal Walkthrough',
+        // Personal walkthrough hidden until it's ready for public
+        // visualizationSequenceId: 'projects',
+        // visualizationLabel: 'Personal Walkthrough',
         headerImageLabel: 'Projects Header Image',
         headerImage: '/images/ui/panel-texture.png',
         items: [

@@ -2,7 +2,6 @@
   font-family: 'Spectral', serif;
   font-size: 19px;
   color: #D4A040;
-  text-shadow: 0 0 4px rgba(212, 160, 64, 0.5), 0 0 8px rgba(212, 160, 64, 0.2);
   letter-spacing: 3px;
   white-space: nowrap;
   padding: 7px 14px;
@@ -10,7 +9,7 @@
   border: 1px solid rgba(212, 160, 64, 0.25);
   cursor: pointer;
   user-select: none;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
 .map-label:hover,
@@ -18,7 +17,6 @@
   color: #EABA50;
   background: rgba(20, 15, 5, 0.85);
   border-color: rgba(212, 160, 64, 0.6);
-  text-shadow: 0 0 6px rgba(234, 186, 80, 0.7), 0 0 14px rgba(234, 186, 80, 0.3);
   transform: scale(1.08);
 }
 

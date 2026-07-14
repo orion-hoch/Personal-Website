@@ -26,6 +26,16 @@ function App() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  // Prefetch lazy chunks once the scene has settled so the first building
+  // click doesn't stall on downloading/parsing them mid-interaction
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      import('./components/InteriorPanel');
+      import('./components/visualization/VisualizationSequence');
+    }, 3000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   const handleBuildingClick = useCallback((b: BuildingDef) => {
     if (b.decorative) return;
     setFocusedBuilding(b);

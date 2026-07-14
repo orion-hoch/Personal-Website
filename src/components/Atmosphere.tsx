@@ -85,14 +85,13 @@ function AshParticles() {
 
   const ref = useRef<THREE.Points>(null);
 
-  useFrame(({ clock }) => {
+  useFrame(({ clock }, delta) => {
     if (!ref.current) return;
     const posArray = (ref.current.geometry.attributes.position as THREE.BufferAttribute).array as Float32Array;
-    const t = clock.getDelta();
     const elapsed = clock.getElapsedTime();
     for (let i = 0; i < count; i++) {
       posArray[i * 3] += Math.sin(elapsed + i) * 0.003;
-      posArray[i * 3 + 1] -= t * 0.5;
+      posArray[i * 3 + 1] -= delta * 0.5;
       posArray[i * 3 + 2] += Math.cos(elapsed + i * 0.7) * 0.002;
 
       if (posArray[i * 3 + 1] < 0) {

@@ -106,6 +106,9 @@ function LoadedModel({ path, building }: { path: string; building: BuildingDef }
         }
         mesh.castShadow = false;
         mesh.receiveShadow = false;
+        // Pointer events are handled by the invisible proxy box in Building3D —
+        // raycasting against the full model geometry is too slow per mousemove
+        mesh.raycast = () => {};
       }
       // Freeze internal children whose transforms are baked from the GLB
       child.matrixAutoUpdate = false;
@@ -405,6 +408,12 @@ export default function Building3D({ building, onClick }: Props) {
       onPointerOut={isInteractive ? () => { setLocalHovered(false); document.body.style.cursor = 'default'; } : undefined}
     >
       <GLBModel building={building} isHovered={localHovered} />
+      {isInteractive && (
+        <mesh position={[0, building.boxSize[1] / 2, 0]}>
+          <boxGeometry args={building.boxSize} />
+          <meshBasicMaterial visible={false} />
+        </mesh>
+      )}
       {isInteractive && <SelectionRing radius={ringRadius} visible={localHovered} />}
     </group>
   );
