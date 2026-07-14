@@ -322,7 +322,7 @@ export const interiorContent: Record<string, InteriorContent> = {
         layout: 'list',
         intro: 'A smaller archive for the more expressive and web-facing work.',
         headerImageLabel: 'Creative Work Header Image',
-        headerImage: '/images/creative/trivia_header.png',
+        headerImage: '/images/creative/blazers.webp',
         items: [
           {
             title: 'BoxScorigami',
