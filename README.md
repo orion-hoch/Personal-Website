@@ -26,13 +26,11 @@ npm run lint     # ESLint
 │   ├── data/             # building placement (mapData.ts), panel content (content.ts)
 │   └── engine/           # grid utilities, procedural tiles, shared types
 ├── public/
-│   ├── models/           # GLB 3D models (meshopt-compressed)
+│   ├── models/           # GLB 3D models
 │   ├── images/           # panel images, grouped by section
 │   ├── fonts/            # RomanAntique webfonts
 │   └── documents/        # resume + linked PDFs
 ├── docs/                 # design docs, element dictionary, visual inspiration
-├── threejs-skills/       # git submodule — Three.js API reference skills
-└── CLAUDE.md             # project instructions for Claude Code
 ```
 
 ## Notes
