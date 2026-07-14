@@ -22,7 +22,7 @@ function App() {
   const settleTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setHintVisible(false), 15000);
+    const timer = window.setTimeout(() => setHintVisible(false), 7000);
     return () => window.clearTimeout(timer);
   }, []);
 

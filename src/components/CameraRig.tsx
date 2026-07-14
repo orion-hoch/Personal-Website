@@ -17,7 +17,7 @@ export default function CameraRig({ focusedBuilding, onUnfocus }: Props) {
   const animating = useRef(false);
   const targetPos = useRef(new THREE.Vector3());
   const targetLookAt = useRef(new THREE.Vector3());
-  const orbitTarget = useMemo(() => new THREE.Vector3(0, 4, 0), []);
+  const orbitTarget = useMemo(() => new THREE.Vector3(0, 2, 0), []);
 
   // Save orbit state before focusing
   const savedOrbitPos = useRef(new THREE.Vector3());

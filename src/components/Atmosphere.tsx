@@ -45,13 +45,13 @@ function FlickerLight({ col, row, color, intensity }: { col: number; row: number
   const lightRef = useRef<THREE.PointLight>(null);
   const [x, , z] = gridTo3D(col, row);
   const phase = useMemo(() => pseudoRandom(col * 100 + row) * Math.PI * 2, [col, row]);
-  const baseIntensity = useMemo(() => intensity * 11, [intensity]);
+  const baseIntensity = useMemo(() => intensity * 16, [intensity]);
 
   useFrame(({ clock }) => {
     if (lightRef.current) {
       const t = clock.getElapsedTime();
       const flicker = Math.sin(t * 3 + phase) * 0.15 + Math.sin(t * 7.3 + phase * 2) * 0.08;
-      lightRef.current.intensity = baseIntensity + flicker * 3.5;
+      lightRef.current.intensity = baseIntensity + flicker * 5;
     }
   });
 
