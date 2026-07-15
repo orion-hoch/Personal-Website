@@ -79,7 +79,7 @@ function VisualizationStage({ steps, stepIndex, moving }: { steps: Visualization
       <hemisphereLight args={['#e4ca8e', '#21140f', 0.48]} position={[0, 15, 0]} />
       <directionalLight position={[12, 15, 6]} intensity={0.84} color="#f4d27d" />
       <directionalLight position={[-6, 8, -8]} intensity={0.12} color="#7d433e" />
-      <pointLight position={[activePosition.x, 8, activePosition.z + 2]} intensity={4.4} color="#f5cc6c" distance={24} decay={2} />
+      <pointLight position={[activePosition.x, 8, activePosition.z + 2]} intensity={4.4} color="#f5cc6c" decay={2} />
       <fog attach="fog" args={['#030506', 20, 68]} />
 
       <group position={[activePosition.x, 0, 0]}>

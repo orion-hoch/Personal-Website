@@ -170,7 +170,7 @@ function PlaceholderBox({ building, isHovered }: { building: BuildingDef; isHove
           <cylinderGeometry args={[1.2, 1.2, 1.5, 12]} />
           <meshLambertMaterial color="#D4A040" emissive="#F0D890" emissiveIntensity={2} transparent opacity={0.8} />
         </mesh>
-        <pointLight position={[0, h + 1, 0]} color="#F0D890" intensity={15} distance={30} decay={2} />
+        <pointLight position={[0, h + 1, 0]} color="#F0D890" intensity={15} decay={2} />
         <mesh position={[0, h - 0.1, 0]}>
           <torusGeometry args={[1.4, 0.05, 8, 16]} />
           <meshLambertMaterial color="#4A4A50" />
@@ -210,7 +210,7 @@ function PlaceholderBox({ building, isHovered }: { building: BuildingDef; isHove
               </mesh>
             );
           })}
-          <pointLight position={[2.5, 0, 0]} color="#D08030" intensity={2} distance={5} decay={2} />
+          <pointLight position={[2.5, 0, 0]} color="#D08030" intensity={2} decay={2} />
         </group>
       </group>
     );
