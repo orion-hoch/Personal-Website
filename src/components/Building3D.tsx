@@ -68,7 +68,8 @@ function GLBModel({ building, isHovered }: { building: BuildingDef; isHovered: b
 }
 
 function LoadedModel({ path, building }: { path: string; building: BuildingDef }) {
-  const { scene } = useGLTF(path);
+  // draco=false, meshopt=true — models are meshopt-compressed, no DRACO decoder needed
+  const { scene } = useGLTF(path, false, true);
   const cloned = useMemo(() => {
     const c = scene.clone(true);
 

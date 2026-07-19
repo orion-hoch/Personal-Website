@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/svg+xml" href="/favicon_site.svg" />
+    <!-- Start model downloads immediately, in parallel with the JS bundle,
+         instead of waiting for React + R3F to mount and call useGLTF -->
+    <link rel="preload" as="fetch" crossorigin href="/models/lighthouse.glb" />
+    <link rel="preload" as="fetch" crossorigin href="/models/camp.glb" />
+    <link rel="preload" as="fetch" crossorigin href="/models/power_plant.glb" />
+    <link rel="preload" as="fetch" crossorigin href="/models/radiotower.glb" />
+    <link rel="preload" as="fetch" crossorigin href="/models/bunker.glb" />
+    <link rel="preload" as="fetch" crossorigin href="/models/ferriswheel.glb" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />

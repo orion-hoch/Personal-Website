@@ -206,7 +206,7 @@ function ProceduralAsset({ asset, active = false }: Props) {
 
 function LoadedAsset({ asset }: Props) {
   const path = `/models/${asset.modelFile}`;
-  const { scene } = useGLTF(path);
+  const { scene } = useGLTF(path, false, true);
 
   const cloned = useMemo(() => {
     const c = scene.clone(true);
